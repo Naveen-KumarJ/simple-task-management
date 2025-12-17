@@ -13,6 +13,7 @@ A simple task management application where users can manage their tasks and an a
 ## 🛠 Tech Stack
 
 * **Frontend:** React
+* **Styling:** Tailwindcss
 * **Routing:** React Router DOM
 * **State Management:** React Hooks (`useState`, `useEffect`)
 * **Storage:** LocalStorage
