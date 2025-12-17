@@ -37,12 +37,26 @@ const UserDashboard = () => {
   };
 
   return (
-    <div>
-      <h2>User Dashboard - {username}</h2>
-      <button onClick={logout}>Logout</button>
+    <div className="min-h-screen bg-linear-to-br from-primary via-secondary to-light flex items-center justify-center px-4">
+      <div className="bg-primary w-full max-w-4xl rounded-xl shadow-lg p-6 md:p-8">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-3">
+          <h2 className="text-2xl font-semibold text-white">
+            Welcome, <span className="font-bold">{username}</span>
+          </h2>
 
-      <TaskForm tasks={tasks} updateTasks={updateTasks} />
-      <TaskList tasks={tasks} updateTasks={updateTasks} />
+          <button
+            onClick={logout}
+            className="px-4 py-2 bg-white text-primary font-semibold rounded-md cursor-pointer"
+          >
+            Logout
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TaskForm tasks={tasks} updateTasks={updateTasks} />
+          <TaskList tasks={tasks} updateTasks={updateTasks} />
+        </div>
+      </div>
     </div>
   );
 };
