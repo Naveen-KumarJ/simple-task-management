@@ -1,16 +1,77 @@
-# React + Vite
+# 📝 Simple Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task management application where users can manage their tasks and an admin can view all users tasks. Data is stored using **LocalStorage**, with basic role-based access.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+**Live URL:** [Simple-Task-Management](https://simple-task-management-sigma.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React
+* **Routing:** React Router DOM
+* **State Management:** React Hooks (`useState`, `useEffect`)
+* **Storage:** LocalStorage
+
+---
+
+## 🔐 User Roles
+
+* **Admin**
+
+  * Can view all users and their tasks
+* **User**
+
+  * Can create, edit, and delete their own tasks
+
+---
+
+## 🔄 Application Flow
+
+1. User logs in using predefined credentials
+2. Role is identified (Admin / User)
+3. Access is protected using **Protected Routes**
+4. * **User Dashboard:** Manage personal tasks (CRUD)
+   * **Admin Dashboard:** View all users and tasks
+5. Data is saved and fetched from **LocalStorage**
+6. Logout clears active user session
+
+---
+
+## 📁 Folder Structure
+```
+src/
+├── assets/
+├── components/
+│   ├── TaskForm.jsx
+│   └── TaskList.jsx
+├── data/
+│   └── accountsInfo.js
+├── pages/
+│   ├── AdminDashboard.jsx
+│   ├── Login.jsx
+│   └── UserDashboard.jsx
+├── routes/
+│   ├── ProtectedRoute.jsx
+│   └── router.jsx
+├── utils/
+│   └── storageHelper.js
+├── App.jsx
+├── index.css
+└── main.jsx
+```
+
+
+## 📂 Features
+
+* Login authentication
+* Role-based routing
+* Task CRUD operations
+* Admin overview of all users
+* LocalStorage persistence
+
+---
